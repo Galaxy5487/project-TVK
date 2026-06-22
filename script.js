@@ -13,6 +13,15 @@ function addInternship() {
     let student =
         document.getElementById("studentName").value;
 
+    let regNo =
+        document.getElementById("regNo").value;
+
+    let startDate =
+        document.getElementById("startDate").value;
+
+    let endDate =
+        document.getElementById("endDate").value;
+
     let department =
         document.getElementById("department").value;
 
@@ -32,6 +41,9 @@ function addInternship() {
 
     internships.push({
         student,
+        regNo,
+        startDate,
+        endDate,
         department,
         company,
         role,
@@ -42,6 +54,9 @@ function addInternship() {
     renderTable();
 
     document.getElementById("studentName").value = "";
+    document.getElementById("regNo").value = "";
+    document.getElementById("startDate").value = "";
+    document.getElementById("endDate").value = "";
     document.getElementById("department").value = "";
     document.getElementById("companyName").value = "";
     document.getElementById("role").value = "";
@@ -65,10 +80,17 @@ function renderTable() {
         table.innerHTML += `
         <tr>
             <td>${item.student}</td>
+            <td>${item.regNo}</td>
+            <td>${item.startDate}</td>
+            <td>${item.endDate}</td>
             <td>${item.department}</td>
             <td>${item.company}</td>
             <td>${item.role}</td>
-            <td>${item.status}</td>
+            <td>
+            <span class="status ${item.status.toLowerCase()}">
+            ${item.status}
+            </span>
+            </td>
             <td>
                 <button
                 class="delete-btn"
