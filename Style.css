@@ -102,9 +102,182 @@ table th {
     color: #2563eb;
 }
 
-@media(max-width:768px) {
+/* ===== Table wrapper for horizontal scroll on small screens ===== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ===== Tablet — max-width: 768px ===== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    /* Two-column form grid on tablets */
+    .card .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+    }
+
+    .card .form-grid .full-width {
+        grid-column: 1 / -1;
+    }
+
     table {
+        font-size: 13px;
+        min-width: 700px;  /* force scroll instead of squishing */
+    }
+
+    table th,
+    table td {
+        padding: 8px 6px;
+    }
+
+    .stat-box {
+        min-width: 140px;
+        padding: 15px;
+    }
+}
+
+/* ===== Small Tablet — max-width: 600px ===== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.15rem;
+    }
+
+    .container {
+        width: 96%;
+        margin: 10px auto;
+    }
+
+    .card {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    input,
+    select {
+        padding: 9px;
         font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .delete-btn {
+        width: auto;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    table {
+        font-size: 12px;
+        min-width: 650px;
+    }
+
+    table th,
+    table td {
+        padding: 7px 5px;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stat-box {
+        min-width: 100%;
+        padding: 12px;
+    }
+
+    .stat-box h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ===== Mobile Phone — max-width: 480px ===== */
+@media (max-width: 480px) {
+    header {
+        padding: 12px 8px;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 98%;
+        margin: 8px auto;
+    }
+
+    .card {
+        padding: 10px;
+        margin-bottom: 12px;
+        border-radius: 6px;
+    }
+
+    h2 {
+        font-size: 0.95rem;
+    }
+
+    input,
+    select {
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 11px;
+        min-width: 600px;
+    }
+
+    table th,
+    table td {
+        padding: 6px 4px;
+        white-space: nowrap;
+    }
+
+    .status {
+        padding: 3px 7px;
+        font-size: 11px;
+    }
+
+    .stat-box p {
+        font-size: 13px;
     }
 }
 
