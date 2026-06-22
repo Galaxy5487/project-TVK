@@ -87,7 +87,7 @@ function renderTable() {
             <td>${item.company}</td>
             <td>${item.role}</td>
             <td>
-            <span class="status ${item.status.toLowerCase()}">
+            <span class="status ${item.status.toLowerCase().replace(/ /g, '-')}">
             ${item.status}
             </span>
             </td>
